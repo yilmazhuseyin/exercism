@@ -1,7 +1,6 @@
 
-export function twoFer(name:string): string {
-  if(name == null)
-    return "One for you, one for me.";
-  else
-    return "One for " + name + ", one for me.";
-}
+
+export function twoFer(name:string = "you"): string {
+    return `One for ${name}, one for me.`;
+  }
+  
