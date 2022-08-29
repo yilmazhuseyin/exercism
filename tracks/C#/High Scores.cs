@@ -10,7 +10,7 @@ public class HighScores
     
     public List<int> Scores() => _list;
 
-    public int Latest() => _list[_list.Count - 1];
+    public int Latest() => _list.Last();
 
     public int PersonalBest() => _list.Max();
 
