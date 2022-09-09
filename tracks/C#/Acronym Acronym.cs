@@ -31,3 +31,18 @@ public static class Acronym
         return result.ToUpper();
     }
 }
+
+//Seccond approach
+
+using System;
+using System.Linq;
+
+public static class Acronym
+{
+    public static string Abbreviate(string phrase)
+    {
+        char[] separators = { ' ', '-', '_' };
+        string abb = String.Join("", phrase.Split(separators, StringSplitOptions.RemoveEmptyEntries).Select(x => x[0]));
+        return abb.ToUpper();
+    }
+}
